@@ -7,6 +7,8 @@ QMAKE_CXXFLAGS += -std=c++11
 SOURCES += main.cpp \
     tools.cpp
 
+LIBS += -L"/usr/include/gsl/" -lgsl -lgslcblas
+INCLUDEPATH += -I"/usr/include"
 HEADERS += \
-    tools.h
-
+    tools.h \
+    #/usr/include/gsl
