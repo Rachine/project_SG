@@ -21,7 +21,7 @@ class Cours
 public:
     Cours();
     ~Cours();
-    Cours(double initPrix, double volatilite,double taux, int nbEtapes);
+    Cours(double initPrix, double volatilite, double taux, double nbEtapes);
     int getSize();
     void afficherDebutPrix(unsigned int n);
     void ecrireCSV(string fileName);
@@ -39,7 +39,7 @@ public:
     ~Strategie();
     Strategie(int degre_poly,int nb_Etapes);
     void Calcul_coeff(int nb_Cours);
-    double Calcul_Prix(vector<Cours> Matrice_Cours, double taux);
+    void Calcul_Prix(vector<Cours> Matrice_Cours, double taux, double strike);
     int degree, etapes;
     void afficherDebutCoeff(int n);
 
